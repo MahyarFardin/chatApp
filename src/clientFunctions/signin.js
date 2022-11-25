@@ -10,14 +10,14 @@ export const signin=async (data)=>{
         })
 
         if (res.data.status === 'success') {
-            alert( 'SIGNIN  successfully!');
+			return 200
             window.setTimeout(() => {
                 location.assign('/');
             }, 1500);
         }
     } catch (e) {
         console.log(e);
-        alert(e.response.data.message)
+		return 401
         console.log(e.response.data.message)
     }
 
