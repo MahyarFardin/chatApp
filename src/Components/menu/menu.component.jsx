@@ -14,47 +14,70 @@ import {
 import { RiBellFill, RiBellLine } from "react-icons/ri";
 import { AiOutlineSetting, AiTwotoneSetting } from "react-icons/ai";
 
-export default function Menu() {
-  const [active, setActive] = useState;
 
+export default function Menu() {
+  const [active, setActive] = useState({
+    home: false,
+    chat: true,
+    setting: false,
+    notification: false,
+    calender: false,
+    profile: false,
+  });
+
+  const scheme = {
+    home: false,
+    chat: false,
+    setting: false,
+    notification: false,
+    calender: false,
+    profile: false,
+  };
+
+  console.log(active);
   return (
     <ul className="flex flex-col justify-evenly ">
       <Item
         first={<BsGrid1X2Fill size={20} className="text-blue" />}
         second={<BsGrid1X2 size={20} className="text-gray" />}
         text="home"
-        clicked={false}
-        onClick
+        clicked={active.home}
+        onclick={()=>setActive(()=>{return({...scheme,home:true})})}
       />
       <Item
         first={<BsFillChatDotsFill size={20} className="text-blue" />}
         second={<BsChatDots size={20} className="text-gray" />}
         text="chat"
-        clicked={false}
+        clicked={active.chat}
+        onclick={()=>setActive(()=>{return({...scheme,chat:true})})}
       />
       <Item
         first={<BsPersonCheckFill size={20} className="text-blue" />}
         second={<BsPersonCheck size={20} className="text-gray" />}
         text="profile"
-        clicked={false}
+        clicked={active.profile}
+        onclick={()=>setActive(()=>{return({...scheme,profile:true})})}
       />
       <Item
         first={<BsCalendarWeekFill size={20} className="text-blue" />}
         second={<BsCalendarWeek size={20} className="text-gray" />}
         text="calender"
-        clicked={false}
+        clicked={active.calender}
+        onclick={()=>setActive(()=>{return({...scheme,calender:true})})}
       />
       <Item
         first={<RiBellFill size={20} className="text-blue" />}
         second={<RiBellLine size={20} className="text-gray" />}
         text="notification"
-        clicked={false}
+        clicked={active.notification}
+        onclick={()=>setActive(()=>{return({...scheme,notification:true})})}
       />
       <Item
         first={<AiTwotoneSetting size={20} className="text-blue" />}
         second={<AiOutlineSetting size={20} className="text-gray" />}
         text="setting"
-        clicked={false}
+        clicked={active.setting}
+        onclick={()=>setActive(()=>{return({...scheme,setting:true})})}
       />
     </ul>
   );
