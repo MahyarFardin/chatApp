@@ -13,7 +13,7 @@ function Dashboard(props) {
         className="text-gray lg:hidden m-4 hover:cursor-pointer"
       />
       {hamMenu && (
-        <div className="flex flex-col lg:hidden shadow-2xl shadow-gray w-2/3 h-full">
+        <div className="flex flex-col bg-white lg:hidden shadow-2xl shadow-gray w-2/3 h-full">
           <div className="w-full h-full flex-col justify-between text-center">
             <img className="rounded-full" src="props" alt="profile picture" />
             <h3>{props.name}</h3>
@@ -22,7 +22,7 @@ function Dashboard(props) {
         </div>
       )}
 
-      <div className="hidden lg:flex lg:flex-col shadow-2xl shadow-gray w-1/5 h-screen">
+      <div className="hidden fixed z-20 bg-white lg:flex lg:flex-col shadow-2xl shadow-gray w-1/5 h-screen">
         <div className="w-full h-full flex-col justify-between text-center">
           <img className="rounded-full" src="props" alt="profile picture" />
           <h3>{props.name}</h3>

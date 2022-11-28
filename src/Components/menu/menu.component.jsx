@@ -17,8 +17,8 @@ import { AiOutlineSetting, AiTwotoneSetting } from "react-icons/ai";
 
 export default function Menu(props) {
   const [active, setActive] = useState({
-    home: false,
-    chat: true,
+    home: true,
+    chat: false,
     setting: false,
     notification: false,
     calender: false,
@@ -34,7 +34,6 @@ export default function Menu(props) {
     profile: false,
   };
 
-  console.log(active);
   return (
     <ul className={props.classInfo}>
       <Item
