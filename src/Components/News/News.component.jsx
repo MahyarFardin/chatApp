@@ -13,11 +13,12 @@ export default function HomeComp() {
   }, []);
 
   return (
-    <div className="w-screen h-max px-36 mt-10">
-      <ul className="grid grid-cols-2 mx-auto gap-8  items-center">
+    <div className="w-max h-max mt-10">
+      <h2> News</h2>
+      <ul className="grid grid-cols-2 mx-auto gap-8 items-center">
         {news.map((item, idx) => {
           return (
-            <li className="w-2/3 h-48 block">
+            <li className="w-full h-56 block shadow-2xl">
               <NewsCad key={idx} {...item} />
             </li>
           );

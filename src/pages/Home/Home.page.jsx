@@ -4,11 +4,11 @@ import Dashboard from "../../Components/Dashboard/Dashboard.component";
 
 export const Home = () => {
   return (
-    <div className="w-full h-screen flex">
-      <div className="w-1/5 h-screen">
+    <div className="w-full h-screen grid grid-cols-3 gap-0">
+      <div className="w-max h-screen">
         <Dashboard />
       </div>
-      <div className="w-4/5 h-screen">
+      <div className="w-max h-screen col-span-2">
         <HomeComp />
       </div>
     </div>

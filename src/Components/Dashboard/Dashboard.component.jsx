@@ -22,7 +22,7 @@ function Dashboard(props) {
         </div>
       )}
 
-      <div className="hidden fixed z-20 bg-white lg:flex lg:flex-col shadow-2xl shadow-gray w-1/5 h-screen">
+      <div className="hidden fixed z-100 bg-white lg:flex lg:flex-col shadow-2xl shadow-gray w-1/5 h-screen">
         <div className="w-full h-full flex-col justify-between text-center">
           <img className="rounded-full" src="props" alt="profile picture" />
           <h3>{props.name}</h3>
