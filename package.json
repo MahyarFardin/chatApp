@@ -12,6 +12,7 @@
     "crypto": "^1.0.1",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
+    "express-mongo-sanitize": "^2.2.0",
     "firebase": "^9.9.4",
     "helmet": "^6.0.0",
     "jsonwebtoken": "^8.5.1",
@@ -22,7 +23,8 @@
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
-    "validator": "^13.7.0"
+    "validator": "^13.7.0",
+    "xss-clean": "^0.1.1"
   },
   "devDependencies": {
     "@types/jest": "^29.0.0",
