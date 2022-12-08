@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Menu from "../menu/menu.component";
-import Item from "../menu/Item.listItem";
 
 function Dashboard(props) {
   const [hamMenu, setHamMenu] = useState(false);
@@ -17,7 +16,11 @@ function Dashboard(props) {
           <div className="w-full h-full flex-col justify-between text-center">
             <img className="rounded-full" src="props" alt="profile picture" />
             <h3>{props.name}</h3>
-            <Menu classInfo={"flex flex-col justify-evenly "} />
+            <Menu
+              setactive={props.setter}
+              active={props.active}
+              classInfo={"flex flex-col justify-evenly "}
+            />
           </div>
         </div>
       )}
@@ -26,7 +29,11 @@ function Dashboard(props) {
         <div className="w-full h-full flex-col justify-between text-center">
           <img className="rounded-full" src="props" alt="profile picture" />
           <h3>{props.name}</h3>
-          <Menu classInfo={"flex flex-col justify-evenly "} />
+          <Menu
+            active={props.active}
+            setactive={props.setter}
+            classInfo={"flex flex-col justify-evenly "}
+          />
         </div>
       </div>
     </>

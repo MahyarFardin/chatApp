@@ -16,15 +16,6 @@ import { RiBellFill, RiBellLine } from "react-icons/ri";
 import { AiOutlineSetting, AiTwotoneSetting } from "react-icons/ai";
 
 export default function Menu(props) {
-  const [active, setActive] = useState({
-    home: true,
-    chat: false,
-    setting: false,
-    notification: false,
-    calender: false,
-    profile: false,
-  });
-
   const scheme = {
     home: false,
     chat: false,
@@ -40,9 +31,9 @@ export default function Menu(props) {
         first={<BsGrid1X2Fill size={20} className="text-blue" />}
         second={<BsGrid1X2 size={20} className="text-gray" />}
         text="home"
-        clicked={active.home}
+        clicked={props.active.home}
         onclick={() =>
-          setActive(() => {
+          props.setactive(() => {
             return { ...scheme, home: true };
           })
         }
@@ -51,9 +42,9 @@ export default function Menu(props) {
         first={<BsFillChatDotsFill size={20} className="text-blue" />}
         second={<BsChatDots size={20} className="text-gray" />}
         text="chat"
-        clicked={active.chat}
+        clicked={props.active.chat}
         onclick={() =>
-          setActive(() => {
+          props.setactive(() => {
             return { ...scheme, chat: true };
           })
         }
@@ -62,9 +53,9 @@ export default function Menu(props) {
         first={<BsPersonCheckFill size={20} className="text-blue" />}
         second={<BsPersonCheck size={20} className="text-gray" />}
         text="profile"
-        clicked={active.profile}
+        clicked={props.active.profile}
         onclick={() =>
-          setActive(() => {
+          props.setactive(() => {
             return { ...scheme, profile: true };
           })
         }
@@ -73,9 +64,9 @@ export default function Menu(props) {
         first={<BsCalendarWeekFill size={20} className="text-blue" />}
         second={<BsCalendarWeek size={20} className="text-gray" />}
         text="calender"
-        clicked={active.calender}
+        clicked={props.active.calender}
         onclick={() =>
-          setActive(() => {
+          props.setactive(() => {
             return { ...scheme, calender: true };
           })
         }
@@ -84,9 +75,9 @@ export default function Menu(props) {
         first={<RiBellFill size={20} className="text-blue" />}
         second={<RiBellLine size={20} className="text-gray" />}
         text="notification"
-        clicked={active.notification}
+        clicked={props.active.notification}
         onclick={() =>
-          setActive(() => {
+          props.setactive(() => {
             return { ...scheme, notification: true };
           })
         }
@@ -95,9 +86,9 @@ export default function Menu(props) {
         first={<AiTwotoneSetting size={20} className="text-blue" />}
         second={<AiOutlineSetting size={20} className="text-gray" />}
         text="setting"
-        clicked={active.setting}
+        clicked={props.active.setting}
         onclick={() =>
-          setActive(() => {
+          props.setactive(() => {
             return { ...scheme, setting: true };
           })
         }
