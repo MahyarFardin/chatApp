@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { NewsCad } from "../NewsCard/NewsCard.component";
-
+import {BsNewspaper} from "react-icons/bs"
 export default function HomeComp() {
   const [news, setNews] = useState([]);
   useEffect(() => {
@@ -14,6 +14,7 @@ export default function HomeComp() {
 
   return (
     <div className="w-full h-max px-5">
+      
       <h2 className="font-bold text-2xl my-10">News</h2>
 
       <ul className="w-full h-max grid grid-cols-2 gap-8 items-center">

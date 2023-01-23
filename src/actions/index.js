@@ -1,16 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit'
-
-export const createUser= createSlice({
-  name: 'createUser',
-  initialState: {
-	name:"",
-	email:"",
-	password:""
-  },
-  reducers: {
-  }
+export const loginUser= (user)=>({
+  name:user.name,
+  email:user.email,
+  password:user.password
 })
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
-
-export default counterSlice.reducer
+export const logoutUser= (user)=>({
+  name:user.name,
+  email:user.email,
+  password:user.password
+})
